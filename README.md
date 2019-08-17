@@ -18,11 +18,20 @@ Create a new puzzle instance
 // import library
 let SudokuPuzzle = require('jassl');
 
-// empty puzzle
+// empty list of values for the puzzle
 let puzzleValues = Array(81).fill();
 
-// create puzzle entry: defaults to 9x9 with 3x3 sectors
+// create sudoku instance: defaults to 9x9 with 9 3x3 sectors
 let sudoku = new SudokuPuzzle(puzzleValues);
+```
+
+Create puzzle instance with non-traditional sector size
+```js
+// empty list of values for the puzzle
+let puzzleValues = Array(10 * 10).fill();
+
+// creates a 10x10 with 4 5x5 sectors
+let sudoku = new SudokuPuzzle(puzzleValues, {sectorWidth: 5, sectorHeight: 5});
 ```
 
 Attempt to solve puzzle
