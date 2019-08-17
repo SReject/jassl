@@ -1,11 +1,16 @@
 {
-    "version": "1.0.1",
+    "version": "1.0.2",
     "author": "SReject",
-
     "name": "jassl",
     "description": "Just Another Sudoku Solving Library",
-    "keywords": ["sudoku", "track", "tracker", "solve", "solving", "solver"],
-    
+    "keywords": [
+        "sudoku",
+        "track",
+        "tracker",
+        "solve",
+        "solving",
+        "solver"
+    ],
     "license": "ISC",
     "homepage": "https://github.com/SReject/jassl",
     "repository": {
@@ -15,6 +20,5 @@
     "bugs": {
         "url": "https://github.com/SReject/jassl/issues"
     },
-
     "main": "index.js"
 }
