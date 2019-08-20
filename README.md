@@ -1,3 +1,5 @@
+[![npm](https://img.shields.io/npm/v/jassl "npm")](https://npmjs.com/package/jassl)
+
 # JASSL
 (WIP) Just Another Sudoku Solving Library
 
