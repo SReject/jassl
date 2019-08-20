@@ -2,8 +2,7 @@
 
 const assert = require('assert');
 const puzzles = require('./puzzles');
-const Sudoku = require('..');
-
+const Sudoku = require('../');
 
 describe('SudokuSolver Class', function () {
     describe('#Constructor()', function () {
@@ -19,7 +18,6 @@ describe('SudokuSolver Class', function () {
                 assert.throws(() => new Sudoku(puzzles['Invalid:String']));
                 assert.throws(() => new Sudoku(puzzles['Invalid:NumericString']));
             });
-
             it('must not have any cell value greater than the number of cells in a group', function () {
                 assert.throws(() => new Sudoku(puzzles['Invalid:ValueToLarge']));
             });
@@ -54,7 +52,7 @@ describe('SudokuSolver Class', function () {
                 new Sudoku(puzzle, {height: 3});
             });
             it('As an object specifying a height must be an unsigned integer', function () {
-                assert.throws(() => new Sudoku(puzzle, {width: 'a'}));
+                assert.throws(() => new Sudoku(puzzle, {width: 3, height: 'a'}));
             });
             it('May be an object that specifies both width and height', function () {
                 new Sudoku(puzzle, {width: 3, height: 3});
@@ -75,8 +73,6 @@ describe('SudokuSolver Class', function () {
                 new Sudoku(puzzles['Solved Puzzle']);
             });
         });
-
-
 
         describe('Should be able to create non-traditional sized puzzles', function () {
             it('25x25 with assumed sector size', function () {
@@ -102,5 +98,3 @@ describe('SudokuSolver Class', function () {
         });
     });
 });
-
-
