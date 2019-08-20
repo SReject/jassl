@@ -20,5 +20,71 @@
     "bugs": {
         "url": "https://github.com/SReject/jassl/issues"
     },
-    "main": "index.js"
+    "main": "index.js",
+
+    "scripts": {
+        "lint": "./node_modules/.bin/eslint .",
+        "lint:fix": "./node_modules/.bin/eslint --fix"
+    },
+
+    "devDependencies": {
+        "eslint": "^6.2.0"
+    },
+
+    "eslintConfig": {
+        "extends": "eslint:recommended",
+        "parserOptions": {
+            "ecmaVersion": 8
+        },
+    
+        "env":{
+            "node": true,
+            "browser": true,
+            "es6": true
+        },
+    
+        "rules": {
+            "for-direction": "off",
+            "no-console": "error",
+            "eqeqeq": ["error", "smart"],
+            "guard-for-in": "error",
+            "no-else-return": ["error", {"allowElseIf": false}],
+            "no-eval": "error",
+            "no-floating-decimal": "error",
+            "no-lone-blocks": "error",
+            "no-throw-literal": "error",
+            "no-unused-expressions": "error",
+            "no-with": "error",
+            "wrap-iife": "error",
+            "no-use-before-define": "error",
+            "array-bracket-spacing": "error",
+            "block-spacing": "error",
+            "brace-style": "error",
+            "camelcase": "error",
+            "comma-dangle": "error",
+            "comma-spacing": "error",
+            "comma-style": "error",
+            "computed-property-spacing": "error",
+            "indent": ["error", 4],
+            "keyword-spacing": "error",
+            "linebreak-style": "error",
+            "new-cap": "error",
+            "no-trailing-spaces": "error",
+            "semi": "error",
+            "semi-spacing": ["error", {"before": false, "after": true}],
+            "semi-style": "error",
+            "space-before-blocks": "error",
+            "space-in-parens": ["error", "never"],
+            "space-infix-ops": "error",
+            "space-unary-ops": "error",
+            "switch-colon-spacing": "error",
+            "arrow-spacing": "error",
+            "no-confusing-arrow": "error",
+            "no-var": "error"
+        }
+    },
+
+    "eslintIgnore": [
+        "node_modules/*"
+    ]
 }
