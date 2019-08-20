@@ -3,7 +3,7 @@
 const assert = require('assert');
 const puzzles = require('./puzzles');
 const Sudoku = require('../');
-const {isUINT, getType} = require('../lib/misc/util.js');
+const {isUINT} = require('../lib/misc/util.js');
 
 describe('toUINT()', function () {
     it('Should return false if input is not numerical', function () {
