@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/SReject/jassl.svg?branch=master)](https://travis-ci.org/SReject/jassl) [![npm](https://img.shields.io/npm/v/jassl "npm")](https://npmjs.com/package/jassl) [![devDependencies Status](https://david-dm.org/SReject/jassl/dev-status.svg)](https://david-dm.org/SReject/jassl?type=dev)
+[![Build Status](https://travis-ci.org/SReject/jassl.svg?branch=master)](https://travis-ci.org/SReject/jassl) [![npm](https://img.shields.io/npm/v/jassl "npm")](https://npmjs.com/package/jassl) [![Dev Dependencies](https://img.shields.io/david/dev/sreject/jassl)](https://david-dm.org/SReject/jassl?type=dev)
 
 # JASSL
 (WIP) Just Another Sudoku Solving Library
