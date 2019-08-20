@@ -7,6 +7,10 @@ const Sudoku = require('..');
 
 describe('SudokuSolver', function () {
     describe('#Constructor()', function () {
+        it('should require an array as input', function () {
+            assert.throws(() => new Sudoku());
+        });
+
         it('should be able to create an instance with no solved cells', function () {
             new Sudoku(puzzles['Empty Puzzle']);
         });
@@ -21,6 +25,12 @@ describe('SudokuSolver', function () {
 
         it('should require puzzles to be a square', function () {
             assert.throws(() => new Sudoku(puzzles['Non-Square Puzzle']));
+        });
+
+        it('should require cell values to be unsigned integer', function () {
+            assert.throws(() => new Sudoku(puzzles['Invalid:Decimal']));
+            assert.throws(() => new Sudoku(puzzles['Invalid:String']));
+            assert.throws(() => new Sudoku(puzzles['Invalid:NumericString']));
         });
 
         describe('should be able to create non-traditional sized puzzles', function () {

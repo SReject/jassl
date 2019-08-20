@@ -15,5 +15,9 @@ module.exports = {
     ],
 
     '25x25 Puzzle': Array(25 * 25).fill(0),
-    '10x10 Puzzle': Array(100).fill(0)
+    '10x10 Puzzle': Array(100).fill(0),
+
+    'Invalid:decimal': [0.1, 0, 0, 0],
+    'Invalid:string': ['a', 0, 0, 0],
+    'Invalid:numericString': ['1', 0, 0, 0]
 };
