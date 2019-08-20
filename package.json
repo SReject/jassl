@@ -1,5 +1,5 @@
 {
-    "version": "1.0.6",
+    "version": "1.0.7",
     "author": "SReject",
     "name": "jassl",
     "description": "Just Another Sudoku Solving Library",
@@ -21,34 +21,37 @@
         "url": "https://github.com/SReject/jassl/issues"
     },
     "main": "index.js",
-
     "scripts": {
         "lint": "./node_modules/.bin/eslint .",
         "lint:fix": "./node_modules/.bin/eslint --fix"
     },
-
     "devDependencies": {
         "eslint": "^6.2.0"
     },
-
     "eslintConfig": {
         "extends": "eslint:recommended",
         "parserOptions": {
             "ecmaVersion": 8
         },
-    
-        "env":{
+        "env": {
             "node": true,
             "browser": true,
             "es6": true
         },
-    
         "rules": {
             "for-direction": "off",
             "no-console": "error",
-            "eqeqeq": ["error", "smart"],
+            "eqeqeq": [
+                "error",
+                "smart"
+            ],
             "guard-for-in": "error",
-            "no-else-return": ["error", {"allowElseIf": false}],
+            "no-else-return": [
+                "error",
+                {
+                    "allowElseIf": false
+                }
+            ],
             "no-eval": "error",
             "no-floating-decimal": "error",
             "no-lone-blocks": "error",
@@ -65,16 +68,28 @@
             "comma-spacing": "error",
             "comma-style": "error",
             "computed-property-spacing": "error",
-            "indent": ["error", 4],
+            "indent": [
+                "error",
+                4
+            ],
             "keyword-spacing": "error",
             "linebreak-style": "error",
             "new-cap": "error",
             "no-trailing-spaces": "error",
             "semi": "error",
-            "semi-spacing": ["error", {"before": false, "after": true}],
+            "semi-spacing": [
+                "error",
+                {
+                    "before": false,
+                    "after": true
+                }
+            ],
             "semi-style": "error",
             "space-before-blocks": "error",
-            "space-in-parens": ["error", "never"],
+            "space-in-parens": [
+                "error",
+                "never"
+            ],
             "space-infix-ops": "error",
             "space-unary-ops": "error",
             "switch-colon-spacing": "error",
@@ -83,7 +98,6 @@
             "no-var": "error"
         }
     },
-
     "eslintIgnore": [
         "node_modules/*"
     ]
