@@ -22,11 +22,13 @@
     },
     "main": "index.js",
     "scripts": {
-        "lint": "./node_modules/.bin/eslint .",
-        "lint:fix": "./node_modules/.bin/eslint --fix"
+        "lint": "node ./node_modules/.bin/eslint .",
+        "lint:fix": "node ./node_modules/.bin/eslint --fix",
+        "test": "node ./node_modules/mocha/bin/mocha"
     },
     "devDependencies": {
-        "eslint": "^6.2.0"
+        "eslint": "^6.2.0",
+        "mocha": "^6.2.0"
     },
     "eslintConfig": {
         "extends": "eslint:recommended",
