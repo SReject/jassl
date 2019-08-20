@@ -2,7 +2,7 @@
 
 const assert = require('assert');
 const puzzles = require('./puzzles');
-const Sudoku = require('../');
+const Sudoku = require('..');
 
 
 describe('SudokuSolver', function () {
@@ -29,7 +29,7 @@ describe('SudokuSolver', function () {
             });
 
             it('10x10 with specified sector size', function () {
-                new Sudoku(puzzles['10x10 Puzzle'], {width: 5, height: 2});
+                new Sudoku(puzzles['10x10 Puzzle'], {width: 5, height: 5});
             });
         });
     });
