@@ -79,7 +79,10 @@ describe('SudokuSolver Class', function () {
                 new Sudoku(puzzles['25x25 Puzzle']);
             });
             it('10x10 with specified sector size', function () {
-                new Sudoku(puzzles['10x10 Puzzle'], {width: 5, height: 5});
+                new Sudoku(puzzles['10x10 Puzzle'], {width: 5, height: 2});
+            });
+            it('Should throw an error if the sector does not have the same number of cells as does rows and columns', function () {
+                assert.throws(() => new Sudoku(puzzles['10x10'], {width: 5, height: 5}));
             });
         });
     });
