@@ -1,6 +1,9 @@
 module.exports = {
     'Non-Square Puzzle': Array(80).fill(0),
     'Empty Puzzle': Array(81).fill(0),
+    '25x25 Puzzle': Array(25 * 25).fill(0),
+    '10x10 Puzzle': Array(100).fill(0),
+
     '1 Solved Cell': [1, ...Array(80).fill(0)],
     'Solved Puzzle': [
         3, 5, 9, 1, 7, 6, 2, 4, 8,
@@ -13,9 +16,6 @@ module.exports = {
         8, 7, 3, 9, 1, 5, 6, 2, 4,
         4, 9, 6, 3, 2, 7, 1, 8, 5
     ],
-
-    '25x25 Puzzle': Array(25 * 25).fill(0),
-    '10x10 Puzzle': Array(100).fill(0),
 
     'Invalid:Decimal': [0.1, 0, 0, 0],
     'Invalid:String': ['a', 0, 0, 0],
