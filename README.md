@@ -32,8 +32,8 @@ Create puzzle instance with non-traditional sector size
 // empty list of values for the puzzle
 let puzzleValues = Array(10 * 10).fill();
 
-// creates a 10x10 with 4 5x5 sectors
-let sudoku = new SudokuPuzzle(puzzleValues, {sectorWidth: 5, sectorHeight: 5});
+// creates a 10x10 with 10 5x2 sectors
+let sudoku = new SudokuPuzzle(puzzleValues, {sectorWidth: 5, sectorHeight: 2});
 ```
 
 Attempt to solve puzzle
