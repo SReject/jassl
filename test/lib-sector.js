@@ -42,5 +42,17 @@ describe('SudokuSector Class', function () {
                 }
             });
         });
+
+        //todo: validate .rowStubs
+        //todo: validate .columnStubs
+    });
+    describe('#exclude()', function () {
+        it('Should return false if super.exclude returns false', function () {
+            let sector = new SudokuSector(dummySudoku, 0);
+            sector.solved = true;
+            assert.strictEqual(sector.exclude(1), false);
+        });
+
+        //todo: validate stubs after exclude
     });
 });
