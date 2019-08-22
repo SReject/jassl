@@ -1,9 +1,8 @@
 /*globals describe, it, beforeEach*/
 
 const assert = require('assert');
-const SudokuGroup = require('../lib/group.js');
 const SudokuCell = require('../lib/cell.js');
-
+const SudokuGroup = require('../lib/group.js');
 
 describe('SudokuGroup', function () {
     describe('#Constructor', function () {
