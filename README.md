@@ -1,4 +1,7 @@
-[![Build Status](https://travis-ci.org/SReject/jassl.svg?branch=master)](https://travis-ci.org/SReject/jassl) [![npm](https://img.shields.io/npm/v/jassl "npm")](https://npmjs.com/package/jassl) [![Dev Dependencies](https://img.shields.io/david/dev/sreject/jassl)](https://david-dm.org/SReject/jassl?type=dev) [![Coverage Status](https://coveralls.io/repos/github/SReject/jassl/badge.svg?branch=master)](https://coveralls.io/github/SReject/jassl?branch=master)
+[![version](https://img.shields.io/npm/v/jassl "version")](https://npmjs.com/package/jassl)
+[![dev dependencies](https://img.shields.io/david/dev/sreject/jassl "dev dependencies")](https://david-dm.org/SReject/jassl?type=dev)
+[![build](https://travis-ci.org/SReject/jassl.svg?branch=master "build status")](https://travis-ci.org/SReject/jassl)
+[![coverage](https://coveralls.io/repos/github/SReject/jassl/badge.svg?branch=master "coverage")](https://coveralls.io/github/SReject/jassl?branch=master)
 
 # JASSL
 (WIP) Just Another Sudoku Solving Library

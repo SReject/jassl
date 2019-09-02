@@ -3,5 +3,5 @@ examples/
 coverage/
 test/
 .gitattributes
-TODO
+TODO.md
 .travis.yml
