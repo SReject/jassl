@@ -4,7 +4,7 @@ const assert = require('assert');
 const puzzles = require('./puzzles');
 const Sudoku = require('..');
 
-describe('SudokuSolver Class', function () {
+describe('SudokuPuzzle Class', function () {
     describe('#Constructor()', function () {
         describe('Puzzle inputs', function () {
             it('must be an array', function () {

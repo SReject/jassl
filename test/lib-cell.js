@@ -45,8 +45,9 @@ describe('SudokuCell Class', function () {
             assert.strictEqual(cell.candidates.findIndex(candidate => candidate === 9), 8);
         });
         it('Should return false if the candidate is not found', function () {
-            assert.strictEqual(cell.exclude(10), false);
-            assert.strictEqual(cell.candidates.join(''), '123456789');
+            cell.candidates = [1];
+            assert.strictEqual(cell.exclude(2), false);
+            assert.strictEqual(cell.candidates.join(''), '1');
         });
         it('Should remove the candidate if found in the candidate list and return true', function () {
             assert.strictEqual(cell.exclude(1), true);
