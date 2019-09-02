@@ -85,4 +85,16 @@ describe('SudokuGroup', function () {
             }
         });
     });
+    describe('#excludeNakedSubsets()', function () {
+        let dummyPuzzle, dummyCells, group;
+        beforeEach(function () {
+            dummyPuzzle = {groupLength: 9};
+            dummyCells = Array(9).fill().map((cell, index) => new SudokuCell(dummyPuzzle, index));
+            group = new SudokuGroup('row', dummyPuzzle, 4, dummyCells);
+        });
+        it('Should return false if the group has been solved', function () {
+            group.solved = true;
+            assert.strictEqual(group.exclude(1), false);
+        });
+    });
 });
