@@ -13,6 +13,15 @@ describe('SudokuGroup', function () {
             group = new SudokuGroup('row', dummyPuzzle, 4, dummyCells);
         });
 
+        it('Should throw an error for invalid group type', function () {
+            assert.throws(() => new SudokuGroup('invalid', dummyPuzzle, 0, dummyCells));
+        });
+        it('Should throw an error if the sudoku is missing a groupLength property', function () {
+            assert.throws(() => new SudokuGroup('row', {}, 4, dummyCells));
+        });
+        it('Should throw an error if the number of cells for the group does not match the puzzle\'s groupLength', function () {
+            assert.throws(() => new SudokuGroup('row', {groupLength: 10}, 4, dummyCells));
+        });
         it('Should store the sudoku', function () {
             assert.strictEqual(group.sudoku, dummyPuzzle);
         });
@@ -45,6 +54,11 @@ describe('SudokuGroup', function () {
             group = new SudokuGroup('row', dummyPuzzle, 4, dummyCells);
         });
 
+        it('Should throw an error if the candidate is invalid', function () {
+            assert.throws(() => group.exclude('a'));
+            assert.throws(() => group.exclude(0));
+            assert.throws(() => group.exclude(10));
+        });
         it('Should return false if the group has been solved', function () {
             group.solved = true;
             assert.strictEqual(group.exclude(1), false);
