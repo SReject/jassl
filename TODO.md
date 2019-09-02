@@ -1,10 +1,12 @@
 # To Do
 
-In Progress:  
+In Progress:
+
 0. Increase test code coverage
 
 
-To Come:  
+To Come:
+
 0. Sector-to-Sector interaction Exclusion  
 0. Hidden Subset Exclusion  
 0. X-Wing Exclusion  
@@ -12,7 +14,8 @@ To Come:
 0. Forced Exclusion(Brute Force)
 
 
-Contemplating:  
+Contemplating:
+
 0. Sudoku Generating  
 0. Tracking of steps to solve  
 0. Stepped solving  
