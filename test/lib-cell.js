@@ -38,7 +38,11 @@ describe('SudokuCell Class', function () {
             cell.row = cell.column = cell.sector = {exclude: () => void 0};
             done();
         });
-
+        it('Should thrown an error for an invalid candidate', function () {
+            assert.throws(() => cell.exclude('a'));
+            assert.throws(() => cell.exclude(0));
+            assert.throws(() => cell.exclude(10));
+        });
         it('Should return false if the cell is solved', function () {
             cell.solved = true;
             assert.strictEqual(cell.exclude(9), false);
@@ -67,12 +71,18 @@ describe('SudokuCell Class', function () {
             done();
         });
 
+        it('Should thrown an error for an invalid candidate', function () {
+            assert.throws(() => cell.solveTo('a'));
+            assert.throws(() => cell.solveTo(0));
+            assert.throws(() => cell.solveTo(10));
+        });
         it('Should throw an error if the cell has already been solved', function () {
             cell.solved = true;
             assert.throws(() => cell.solveTo(1));
         });
         it('Should throw an error if the specified solution is not a candidate for the cell', function () {
-            assert.throws(() => cell.solveTo(10));
+            cell.candidates = [2, 3, 4, 5, 6, 7, 8, 9];
+            assert.throws(() => cell.solveTo(1));
         });
         it('Should update state to being solved if solution is valid', function () {
             assert.strictEqual(cell.solveTo(1), true);
