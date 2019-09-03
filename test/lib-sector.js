@@ -55,4 +55,18 @@ describe('SudokuSector Class', function () {
 
         //todo: validate stubs after exclude
     });
+    describe('#excludeSectorToPlaneCandidates()', function () {
+        it('Should return false if sector has been solved', function () {
+            let sector = new SudokuSector(dummySudoku, 0);
+            sector.solved = true;
+            assert.strictEqual(sector.excludeSectorToPlaneCandidates(), false);
+        });
+    });
+    describe('#excludeSectorToSectorCandidates()', function () {
+        it('Should return false if sector has been solved', function () {
+            let sector = new SudokuSector(dummySudoku, 0);
+            sector.solved = true;
+            assert.strictEqual(sector.excludeSectorToSectorCandidates(), false);
+        });
+    });
 });
