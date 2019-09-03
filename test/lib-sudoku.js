@@ -1,4 +1,4 @@
-/*globals describe, it*/
+/*globals describe, it, beforeEach*/
 
 const assert = require('assert');
 const puzzles = require('./puzzles');
@@ -90,14 +90,31 @@ describe('SudokuPuzzle Class', function () {
     describe('#solved', function () {
         it('should return true if the puzzle has been solved', function () {
             let puzzle = new Sudoku(puzzles['Solved Puzzle']);
-
             assert.strictEqual(puzzle.solved, true, 'Puzzle should have indicated it was solved');
         });
-
         it('should return false if the puzzle has not been solved', function () {
             let puzzle = new Sudoku(puzzles['Empty Puzzle']);
-
             assert.strictEqual(puzzle.solved, false, 'Puzzle should have indicated it was not solved');
         });
+    });
+
+    describe('#toArray()', function () {
+        it('Should return an array indicating cells', function () {
+            let puzzle = new Sudoku(puzzles['1 Solved Cell']);
+            assert.strictEqual(puzzle.toArray().join(''), puzzles['1 Solved Cell'].join(''));
+        });
+    });
+
+    describe('#toJSON()', function () {
+        let puzzle;
+        beforeEach(function () {
+            puzzle = (new Sudoku(puzzles['1 Solved Cell'])).toJSON();
+        });
+
+        it ('Should set .solved', function () {
+            assert.strictEqual(puzzle.solved, false);
+        });
+
+        // TODO: further testing
     });
 });
