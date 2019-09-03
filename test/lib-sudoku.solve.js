@@ -13,4 +13,16 @@ describe('SudokuPuzzle#solve()', function () {
         let puzzle = new Sudoku(puzzles['Empty Puzzle']);
         assert.strictEqual(puzzle.solve(), false, 'Puzzle should have indicated it could not be solved');
     });
+    it('Should solve a sole-candidate', function () {
+        let puzzle, input = puzzles['Solved Puzzle'].slice(0);
+        input[0] = 0;
+        puzzle = new Sudoku(input);
+        assert.strictEqual(puzzle.solve(), true);
+        assert.strictEqual(puzzle.cells[0].value, 3);
+    });
+    it('Should solve a unique-candidate', function () {
+        let puzzle = new Sudoku(puzzles['Unique Candidate']);
+        assert.strictEqual(puzzle.solve(), false);
+        assert.strictEqual(puzzle.cells[0].value, 1);
+    });
 });
