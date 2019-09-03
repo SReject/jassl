@@ -12,7 +12,6 @@ describe('SudokuGroup', function () {
             dummyCells = Array(9).fill().map((cell, index) => new SudokuCell(dummyPuzzle, index));
             group = new SudokuGroup('row', dummyPuzzle, 4, dummyCells);
         });
-
         it('Should throw an error for invalid group type', function () {
             assert.throws(() => new SudokuGroup('invalid', dummyPuzzle, 0, dummyCells));
         });
@@ -53,7 +52,6 @@ describe('SudokuGroup', function () {
             dummyCells = Array(9).fill().map((cell, index) => new SudokuCell(dummyPuzzle, index));
             group = new SudokuGroup('row', dummyPuzzle, 4, dummyCells);
         });
-
         it('Should throw an error if the candidate is invalid', function () {
             assert.throws(() => group.exclude('a'));
             assert.throws(() => group.exclude(0));
@@ -95,7 +93,7 @@ describe('SudokuGroup', function () {
         });
         it('Should return false if the group has been solved', function () {
             group.solved = true;
-            assert.strictEqual(group.exclude(1), false);
+            assert.strictEqual(group.excludeNakedSubsets(), false);
         });
         it('Should return false if no naked subsets are found', function () {
             group.cells.forEach((cell, index) => cell.candidates = [index + 1]);
