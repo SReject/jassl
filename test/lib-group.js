@@ -85,6 +85,7 @@ describe('SudokuGroup', function () {
             }
         });
     });
+
     describe('#excludeNakedSubsets()', function () {
         let dummyPuzzle, dummyCells, group;
         beforeEach(function () {
@@ -95,6 +96,16 @@ describe('SudokuGroup', function () {
         it('Should return false if the group has been solved', function () {
             group.solved = true;
             assert.strictEqual(group.exclude(1), false);
+        });
+        it('Should return false if no naked subsets are found', function () {
+            group.cells.forEach((cell, index) => cell.candidates = [index + 1]);
+            assert.strictEqual(group.excludeNakedSubsets(), false);
+        });
+        it('Should remove naked subsets', function () {
+            group.cells[0].candidates = [1, 2];
+            group.cells[1].candidates = [1, 2];
+            assert.strictEqual(group.excludeNakedSubsets(), true);
+            assert.strictEqual(group.cells[3].candidates[0], 3);
         });
     });
 });
